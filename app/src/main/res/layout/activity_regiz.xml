@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/component_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/page_sign_in_ek3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp">
+
+                <ImageView
+                    android:id="@+id/sign_in_ek5"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginTop="80dp"
+                    android:contentDescription="sign_in_ek5"
+                    android:src="@drawable/sign_in_ek5" />
+
+                <EditText
+                    android:id="@+id/enter_your_email_ek1"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginTop="400dp"
+                    android:hint="Enter your email"
+                    android:inputType="textEmailAddress"
+                    android:selectAllOnFocus="true"/>
+
+                <EditText
+                    android:id="@+id/password_ek1"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginTop="455dp"
+                    android:hint="Enter your Pasword"
+                    android:imeActionLabel="Sign in"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:selectAllOnFocus="true" />
+
+                <Button
+                    android:id="@+id/sign_in_ek6"
+                    android:layout_width="206dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="85dp"
+                    android:layout_marginTop="550dp"
+                    android:text="Register"/>
+
+                <TextView
+                    android:id="@+id/don_t_have_an_account__sign_up_ek1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="61dp"
+                    android:layout_marginTop="620dp"
+                    android:gravity="center_horizontal"
+                    android:text="Don't have an account?"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/sign_up_ek1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="265dp"
+                    android:layout_marginTop="620dp"
+                    android:layout_toEndOf="@+id/don_t_have_an_account__sign_up_ek1"
+                    android:text="Sign Up"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

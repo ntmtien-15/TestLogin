@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "517079618275",
+    "firebase_url": "https://exloginregis-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "exloginregis",
+    "storage_bucket": "exloginregis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517079618275:android:cad44e0afa8121bd27abd6",
+        "android_client_info": {
+          "package_name": "com.example.exloginregis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517079618275-6suvtqirkvnft9p89km77q5edhi38245.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRSnyDGaRqYrIBgNz6X2qs4EcDDXSb3RY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "517079618275-6suvtqirkvnft9p89km77q5edhi38245.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
