@@ -27,9 +27,6 @@ class RegisActivity : AppCompatActivity() {
         btnRegister.setOnClickListener {
             SingupUsersdata()
         }
-        sign_in_ek6.setOnClickListener {
-            SingupUsersdata()
-        }
     }
 
     private fun SingupUsersdata() {
@@ -50,7 +47,7 @@ class RegisActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(this) { task ->
             if (task.isSuccessful) {
                 // Sign in success, update UI with the signed-in user's information
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, MainActivity()::class.java)
                 startActivity(intent)
 
                 Toast.makeText(baseContext, "Authentication success.", Toast.LENGTH_SHORT,).show()

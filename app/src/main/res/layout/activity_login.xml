@@ -66,6 +66,14 @@
                     android:layout_marginTop="500dp"
                     android:text="Fogot password?"
                     android:textSize="14sp" />
+                <CheckBox
+                    android:id="@+id/check_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="485dp"
+                    android:text="Save login infomation."
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/don_t_have_an_account__sign_up_ek1"
