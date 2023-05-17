@@ -59,7 +59,7 @@
                     android:text="Sign In"/>
 
                 <TextView
-                    android:id="@+id/fogot_password_"
+                    android:id="@+id/fogot_password"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="230dp"
@@ -77,12 +77,12 @@
                     android:text="Don't have an account?"
                     android:textSize="18sp" />
 
-                <Button
+                <TextView
                     android:id="@+id/sign_up"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
-                    android:layout_marginTop="610dp"
+                    android:layout_marginTop="625dp"
                     android:layout_toEndOf="@+id/don_t_have_an_account__sign_up_ek1"
                     android:text="Sign Up"/>
 

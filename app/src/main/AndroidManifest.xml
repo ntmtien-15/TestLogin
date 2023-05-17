@@ -18,6 +18,9 @@
             android:name=".RegisActivity">
         </activity>
         <activity
+        android:name=".ResetpassActivity">
+        </activity>
+        <activity
             android:name=".LoginAvctivity"
             android:exported="true">
             <intent-filter>

@@ -27,7 +27,7 @@ class RegisActivity : AppCompatActivity() {
         btnRegister.setOnClickListener {
             SingupUsersdata()
         }
-        sign_up_ek1.setOnClickListener {
+        sign_in_ek6.setOnClickListener {
             SingupUsersdata()
         }
     }
@@ -35,9 +35,15 @@ class RegisActivity : AppCompatActivity() {
     private fun SingupUsersdata() {
         val email = enter_your_email_ek1.text.toString()
         val pass = password_ek1.text.toString()
+        val passagain = again_password.text.toString()
+
 
         if (email.isEmpty() || pass.isEmpty()) {
             Toast.makeText(this, "Please enter your email and password", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (pass != passagain) {
+            again_password.error = "Passwords don't match"
             return
         }
         //day du lieu
@@ -47,25 +53,13 @@ class RegisActivity : AppCompatActivity() {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
 
-                Toast.makeText(
-                    baseContext,
-                    "Authentication success.",
-                    Toast.LENGTH_SHORT,
-                ).show()
+                Toast.makeText(baseContext, "Authentication success.", Toast.LENGTH_SHORT,).show()
             } else {
                 // If sign in fails, display a message to the user.
-                Toast.makeText(
-                    baseContext,
-                    "Authentication failed.",
-                    Toast.LENGTH_SHORT,
-                ).show()
+                Toast.makeText( baseContext, "Authentication failed.", Toast.LENGTH_SHORT, ).show()
             }
         }.addOnFailureListener {
-                Toast.makeText(
-                    baseContext,
-                    "Authentication failed. ${it.localizedMessage}",
-                    Toast.LENGTH_SHORT,
-                ).show()
+                Toast.makeText( baseContext, "Authentication failed. ${it.localizedMessage}", Toast.LENGTH_SHORT, ).show()
             }
     }
 }

@@ -28,47 +28,36 @@
                     android:contentDescription="sign_in_ek5"
                     android:src="@drawable/sign_in_ek5" />
 
-                <EditText
-                    android:id="@+id/enter_your_email_ek1"
-                    android:layout_width="300dp"
+                <TextView
+                    android:id="@+id/enter_your_email"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="38dp"
                     android:layout_marginTop="400dp"
-                    android:hint="Enter your email"
-                    android:inputType="textEmailAddress"
+                    android:text="RESET PASSWORD"
+                    android:textSize="25dp"
                     android:selectAllOnFocus="true"/>
 
                 <EditText
-                    android:id="@+id/password_ek1"
+                    android:id="@+id/reset_email"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="38dp"
-                    android:layout_marginTop="455dp"
-                    android:hint="Enter your Password"
+                    android:layout_marginTop="435dp"
+                    android:hint="Enter your email"
                     android:imeActionLabel="Sign in"
                     android:imeOptions="actionDone"
-                    android:inputType="textPassword"
+                    android:inputType="textEmailAddress"
                     android:selectAllOnFocus="true" />
 
-                <EditText
-                    android:id="@+id/again_password"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="38dp"
-                    android:layout_marginTop="510dp"
-                    android:hint="Enter again your Password"
-                    android:imeActionLabel="Sign in"
-                    android:imeOptions="actionDone"
-                    android:inputType="textPassword"
-                    android:selectAllOnFocus="true"/>
-
                 <Button
-                    android:id="@+id/sign_in_ek6"
+                    android:id="@+id/btnreset"
                     android:layout_width="206dp"
                     android:layout_height="48dp"
                     android:layout_marginStart="85dp"
-                    android:layout_marginTop="560dp"
-                    android:text="Register"/>
+                    android:layout_marginTop="550dp"
+                    android:text="Reset"/>
+
             </RelativeLayout>
 
         </RelativeLayout>
