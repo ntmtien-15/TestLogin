@@ -3,6 +3,7 @@ package com.example.exloginregis
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -41,11 +42,25 @@ class LoginAvctivity : AppCompatActivity() {
             val intent = Intent(this, ResetpassActivity::class.java)
             startActivity(intent)
         }
+        val check_save = findViewById<CheckBox>(R.id.check_save)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val sharePreference = getSharedPreferences("Login", MODE_PRIVATE)
+        val email = sharePreference.getString("email", null)
+        val pass = sharePreference.getString("password", null)
+        val save = sharePreference.getBoolean("save", false)
+        if(save){
+            enter_your_email.setText(email)
+            password.setText(pass)
+        }
     }
 
     private fun SigninUser(){
         val email = enter_your_email.text.toString()
         val pass = password.text.toString()
+
         if (email.isEmpty() || pass.isEmpty()) {
             Toast.makeText(this, "Please enter your email and password", Toast.LENGTH_SHORT).show()
             return
@@ -53,18 +68,23 @@ class LoginAvctivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(this) { task ->
             // Tạo đối tượng User
             if (task.isSuccessful) {
-                // Đăng nhập thành công, chuyển đến màn hình chính
-                startActivity(Intent(this, MainActivity::class.java))
+                //lưu thông tin đăng nhập
+                val sharePreference = getSharedPreferences("Login", MODE_PRIVATE)
+                val editor = sharePreference.edit()
+                //lưu theo dạng phân rã
+                editor.putString("email", email)
+                editor.putString("password", pass)
+                editor.putBoolean("save", check_save.isChecked)
+                editor.apply()
+
+                Toast.makeText(this, "đã lưu thông tin đn", Toast.LENGTH_SHORT).show()
+
+                startActivity(Intent(this, MainActivity()::class.java))
                 finish()
             } else {
-                // Đăng nhập thất bại, hiển thị thông báo lỗi
                 val exception = task.exception
                 val errorMessage = exception?.message
-                Toast.makeText(
-                    baseContext,
-                    "Authentication failed: $errorMessage",
-                    Toast.LENGTH_SHORT
-                ).show()
+                Toast.makeText(baseContext,"Authentication failed: $errorMessage",Toast.LENGTH_SHORT).show()
             }
         }
     }
